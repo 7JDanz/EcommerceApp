@@ -41,6 +41,8 @@
     "jwtSecretKey": "MTk1YWU4ZTA5NjQyYmE1OTE4ZWQxMmY2NTYxMzE1YzVlNDhmYjkzNTgzMzI2ZWQxM2YwYjkwNTgzNTc2ZWJiODY4OWRlN2Y5MTdkZDEzNmY2MTA3YWEzNTI4MjEwZGM1ZmIxNWYwZTg4ZDU2NmUwNmRjNWY2YmZlMzA2ZjBmNTE=",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["es"]
+    "languages": ["es"],
+    "entities": ["Product", "ProductCategory", "Customer", "ProductOrder", "OrderItem", "Invoice", "Shipment"],
+    "lastLiquibaseTimestamp": 1623876572000
   }
 }
