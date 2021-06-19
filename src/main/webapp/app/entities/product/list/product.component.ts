@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpHeaders, HttpResponse } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { combineLatest } from 'rxjs';
@@ -15,7 +15,7 @@ import { DataUtils } from 'app/core/util/data-util.service';
   selector: 'jhi-product',
   templateUrl: './product.component.html',
 })
-export class ProductComponent implements OnInit, OnDestroy {
+export class ProductComponent implements OnInit {
   products?: IProduct[];
   isLoading = false;
   totalItems = 0;
@@ -24,7 +24,6 @@ export class ProductComponent implements OnInit, OnDestroy {
   predicate!: string;
   ascending!: boolean;
   ngbPaginationPage = 1;
-  filter: string | undefined;
 
   constructor(
     protected productService: ProductService,
@@ -33,9 +32,6 @@ export class ProductComponent implements OnInit, OnDestroy {
     protected router: Router,
     protected modalService: NgbModal
   ) {}
-  ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
-  }
 
   loadPage(page?: number, dontNavigate?: boolean): void {
     this.isLoading = true;
